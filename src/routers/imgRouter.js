@@ -1,0 +1,13 @@
+const express = require('express');
+const { upload } = require('../utils/multer');
+const { uploadIMG, getIMG,findIMG,detailIMG,commentIMG,saveIMG,postCommentIMG,deleteIMG } = require('../controllers/img');
+const imgRouter = express.Router();
+imgRouter.post("/upload",upload.single("file"),uploadIMG);
+imgRouter.get("/get",getIMG);
+imgRouter.post("/find",findIMG);
+imgRouter.get("/detailIMG/:id",detailIMG);
+imgRouter.get("/commentIMG/:id",commentIMG);
+imgRouter.post("/saveIMG/:id",saveIMG);
+imgRouter.post("/postCommentIMG/:id",postCommentIMG);
+imgRouter.delete('/deleteIMG/:id',deleteIMG);
+module.exports = imgRouter;

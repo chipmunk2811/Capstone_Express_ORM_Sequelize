@@ -1,0 +1,548 @@
+{
+	"info": {
+		"_postman_id": "9a54c003-ca5e-4dc7-a6c9-af640c668824",
+		"name": "Capstone_Express_ORM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26656878",
+		"_collection_link": "https://crimson-firefly-958219.postman.co/workspace/Team-Workspace~a68015a1-9943-4822-8b95-9a17512bcf4c/collection/26656878-9a54c003-ca5e-4dc7-a6c9-af640c668824?action=share&creator=26656878&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user3@gmail.com\",\"mat_khau\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"updateTest@gmail.com\",\"mat_khau\":\"1234\",\"ho_ten\":\"TestUpdate\",\"tuoi\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create IMG ID User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/getCreateIMG/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"getCreateIMG",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save IMG ID User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/user/getSaveIMG/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"getSaveIMG",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/getUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/bg.jpg"
+								},
+								{
+									"key": "ho_ten",
+									"value": "Đã cập nhật 2",
+									"type": "text"
+								},
+								{
+									"key": "tuoi",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/updateUser/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"updateUser",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Img",
+			"item": [
+				{
+					"name": "Get IMG",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/img/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail IMG ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/img/detailIMG/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"detailIMG",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment IMG ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/img/commentIMG/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"commentIMG",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find IMG",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"keyword\":\"u\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/img/find",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save IMG ID",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nguoi_dung_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/img/saveIMG/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"saveIMG",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload IMG",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Admin/Desktop/bg.jpg"
+								},
+								{
+									"key": "mo_ta",
+									"value": "mota7",
+									"type": "text"
+								},
+								{
+									"key": "nguoi_dung_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "ten_hinh",
+									"value": "hình để xóa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/img/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Comment IMG ID",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nguoi_dung_id\":2,\"noi_dung\":\"noidung5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/img/postCommentIMG/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"postCommentIMG",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete IMG ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InJvb3QiLCJwYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE2ODQwMjI3OTYsImV4cCI6MTcxNTU1ODc5Nn0.YHIZRntKSBRIMN6gwNnqMmAG0welPJE9gFI7HcB1BtY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/img/deleteIMG/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"img",
+								"deleteIMG",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin Get Token",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"user\":\"root\",\"password\":1234}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

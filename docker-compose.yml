@@ -1,0 +1,40 @@
+#  Như chạy lệnh docker run -d --name mysql_db -p 3307:3306 -e MYSQL_ROOT_PASSWORD=1234 mysql_db
+version: '3'
+services:
+  # Tên image
+  db_express_orm:
+    image: mysql # docker pull mysql
+    container_name: db_express_orm
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=db_express_orm
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql_db:/var/lib/mysql
+    networks:
+      - express-network
+
+  app:
+    # kết nối với container mysql_db
+    depends_on:
+      - db_express_orm
+    build: .  # tìm file Dockerfile docker build . -t img-node 
+    container_name: Express_ORM
+    env_file:
+      - .env
+    ports:
+      - 3200:8080
+    networks:
+      - express-network
+
+
+volumes:
+  mysql_db:
+    driver: local
+
+# Tên networks docker network ls
+networks:
+  express-network:
+
+# Chạy lệnh docker-compose up -d
