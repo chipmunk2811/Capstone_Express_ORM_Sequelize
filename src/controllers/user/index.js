@@ -74,9 +74,11 @@ const updateUser = async (req, res) => {
       const { id } = req.params;
       const { ho_ten, tuoi } = req.body;
       let file = req.file;
+      console.log(file.filename);
       const data = await models.nguoi_dung.findOne({ where: { nguoi_dung_id: id } });
       if (file) {
-         let duong_dan = `/public/imgs/${file.filename}`;
+         console.log(file.filename);
+         let duong_dan = `/public/imgs/avatar/${file.filename}`;
          if (data.anh_dai_dien) {
             fs.unlinkSync(process.cwd() + data.anh_dai_dien);
             await models.nguoi_dung.update({ anh_dai_dien: duong_dan }, { where: { nguoi_dung_id: id } });

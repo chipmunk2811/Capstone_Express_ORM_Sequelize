@@ -312,9 +312,6 @@
  *        type: file
  *        required: true
  *        description: The file to upload.
- *        properties:
- *          file:
- *              type: file
  * 
  *      - in: body
  *        name: User Đăng Tải

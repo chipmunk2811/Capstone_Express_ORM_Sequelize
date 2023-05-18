@@ -9,7 +9,7 @@ const uploadIMG = async (req, res) => {
     let { nguoi_dung_id, mo_ta, ten_hinh } = req.body;
     try {
         let random_name = file.filename;
-        let duong_dan = `http://localhost:8080/public/imgs/${random_name}`;
+        let duong_dan = `http://103.97.124.164:3100/public/imgs/${random_name}`;
         let newIMG = { nguoi_dung_id, mo_ta, duong_dan, ten_hinh, random_name };
         await models.hinh_anh.create(newIMG);
         res.status(201).send(newIMG);
